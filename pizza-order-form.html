@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+</head>
+<body>
+    <h1>Pizza Order Form</h1>
+    <form action="#">
+        <label for="first-name">First Name: </label>
+        <input type="text" name="first-name" id="first-name">
+        <br>
+        <label for="last-name">Last Name: </label>
+        <input type="text" name="last-name" id="last-name">
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="contact">Contact Number: </label>
+        <input type="number" name="contact" id="contact">
+        <br>
+        <label for="delivery-date">Preferred Delivery Date: </label>
+        <input type="date" name="delivery-date" id="delivery-date">
+        <br>
+        <p>Size: </p>
+        <br>
+        <input type="radio" name="size" id="small">
+        <label for="small">Small</label>
+
+        <input type="radio" name="size" id="medium">
+        <label for="medium">Medium</label>
+
+        <input type="radio" name="size" id="large">
+        <label for="medium">Large</label>
+        <br>
+        <p>Flavor: </p>
+        <br>
+        <input type="checkbox" name="flavor" id="hawaiian">
+        <label for="hawaiian">Hawaiian (Php 150.00)</label>
+        <br>
+        <input type="checkbox" name="flavor" id="pepperoni">
+        <label for="hawaiian">Pepperoni (Php 140.00)</label>
+        <br>
+        <input type="checkbox" name="flavor" id="vegetable">
+        <label for="hawaiian">Vegetable (Php 130.00)</label>
+        <br>
+
+        <label for="credit-card">Credit Card Number:</label>
+        <input type="number" name="credit-card" id="credit-card">
+        <br>
+        
+        <label for="credit-card">PIN:</label>
+        <input type="number" name="pin" id="pin">
+        <br>
+
+        <label for="additional-note">Additional Note:</label>
+        <textarea name="additional-note" id="additional-note" cols="30" rows="10"></textarea>
+        <br>
+        
+        <button type="submit">Submit Order</button>
+
+    </form>
+</body>
+</html>
