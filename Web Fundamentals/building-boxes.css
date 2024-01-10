@@ -1,0 +1,57 @@
+/*CSS reset settings here*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#wrapper{
+    box-sizing: content-box;
+    padding: 20px;
+    width: 940px;
+    background-color: #FFD9B7;
+    margin: 0px auto;
+}
+#logo{
+    margin: 5px;
+    display: inline-block;
+    min-height: 130px;
+    width: 250px;
+    background-color: #B97A57;
+}
+#navigation{
+    margin: 5px;
+    display: inline-block;
+    min-height: 130px;
+    width: 665px;
+    background-color: #FF7F27;
+}
+#main_content{
+    display: block;
+    min-height: 350px;
+    width: 940px;
+    background-color: #880015;
+}
+#about{
+    box-sizing: border-box; 
+    margin: 40px;
+    display: inline-block;
+    min-height: 250px;
+    width: 650px;
+    background-color: #FFAEC9;
+}
+#advertisement{
+    box-sizing: border-box; 
+    display: inline-block;
+    margin-top: 40px;
+    vertical-align: top;
+    min-height: 200px;
+    width: 155px;
+    background-color: #C8BFE7;
+}
+.sponsors{
+    box-sizing: border-box;
+    margin-top: 20px;
+    display: inline-block;
+    min-height: 65px;
+    width: 310px;
+    background-color: #FFFF88;
+}
