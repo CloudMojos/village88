@@ -13,8 +13,8 @@
     }
         .container .hero img {
             display: inline-block;
-            min-height: 120px;
-            max-width: 130px;
+            min-height: 160px;
+            max-width: 160px;
             object-fit: cover;
             object-position: 75%;
         }
@@ -40,6 +40,7 @@
                 background-color: gray;
             }
     .container .about-me {
+        background-color: antiquewhite;
         padding: 30px;
     }
         .container .about-me h3 {
