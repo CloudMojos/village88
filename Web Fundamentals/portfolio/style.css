@@ -46,5 +46,19 @@
         .container .about-me h3 {
             text-align: center;
         }
+    .container .skills {
+        display: block;
+    }
+        .container .skills .languages {
+            display: inline-block;
+        }
+            .container .skills .languages .icons img{
+                height: 50px;
+            }
+        .container .skills .my-projects {
+            display: inline-block;
+            width: 50vw;
+            margin-left: 5vw;
+        }
     
 
