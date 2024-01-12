@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    appearance: none;
+}
+
+button, input[type="button"] {
+    background: none;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+html, body {
+    height: 100vh;
+}  
+body {
+    font-family: SourceSansProRegular, Arial, sans-serif;
+    background: linear-gradient(#203f58, #2b5b83, #203f58, #2b5b83);
+    background-repeat: no-repeat;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 45px;
+}
+    header img {
+        min-height: 85px;
+    }
+    header .header-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+        header .header-buttons button {
+            border-radius: 5px;
+            height: 2rem;
+            line-height: 2px;
+            margin: 10px;
+            padding: 15px;
+            background-color: #ffdc6f;
+        }
+        header .header-buttons form {
+            margin: 0px;
+            padding: 10px 0 10px 18px;
+            border-radius: 5px;
+            background-color: #1e2934;
+        }
+        .search-area {
+            max-height: max-content;
+        }
+            header .header-buttons form #search-box {
+                padding: 9px 3px;
+                margin: 0;
+                width: 18vw;
+            }
+            header .header-buttons form .go {
+                color: whitesmoke;
+                padding: 11px;
+                background-color: #336e9e;
+                border-radius: 5px;
+                margin: 3px;
+            } 
+            header .header-buttons form a {
+                color: whitesmoke;
+                text-decoration: none;
+                padding: 23px 15px;
+                border-left: 1px solid black;
+            }
+nav {
+    margin: 0 3rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #3570a2;
+    display: flex;
+    justify-content: center;
+}
+nav ul {
+    padding: 0;
+    color: whitesmoke;
+    width: 70%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    margin: 0 140px;
+}
+    .hero-text {
+        font-family: SourceSansProBold, Arial, sans-serif;
+        margin-top: 25px;
+        margin-left: 50px;
+    }
+        .hero-text .hero-title {
+            color: #fed244;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+

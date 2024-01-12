@@ -1,0 +1,80 @@
+h1, h2, h3, h4 {
+    font-weight: normal;
+    margin-block-start: 1em;
+    margin-block-end: 0;
+}
+
+body {
+    background-color: #303030;
+    font-family: "Fira Sans", "Source Sans Pro", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+nav {
+    color: #f9ffff;
+    background-color: #8792bf;
+    padding-left: 6vw;
+    border-bottom: 5px solid #4e5c93;
+    margin-bottom: 20px;
+}
+    nav .logo {
+        display: inline-block;
+        width: 50px;
+        vertical-align: middle;
+    }
+    nav .links {
+        display: inline-block;
+        list-style-type: none;
+    }
+        nav .links .nav-link {
+            display: inline-block;
+        }
+    nav form {
+        display: inline-block
+    }
+.current-path {
+    margin-left: 80px;
+    display: inline-block;
+}
+.quick-nav {
+    display: inline-block;
+    margin-left: 700px;
+}
+.current-path > *, .quick-nav > * {
+    color: #f9ffff;
+    text-decoration: none;
+}
+section.content {
+    background-color: #f2f2f2;
+    width: 850px;
+    margin-left: 80px;
+    padding: 30px;
+}
+    section.content .section-title {
+        font-weight: 500;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed gray;
+    }
+    section.content .table-of-contents {
+        font-weight: 500;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed gray;
+    }
+        section.content ul{
+            padding-left: 20px;
+        }
+    section.content .user-note-header {
+        padding-bottom: 10px;
+        border-bottom: 1px dashed gray;
+    }
+        section.content .user-notes {
+            display: inline-block;
+        }
+        section.content .add-note {
+            text-decoration: underline;
+            margin-left: 540px;
+            display: inline-block;
+        }
+        section.content img {
+            height: 1rem;
+        }
+
+ 
