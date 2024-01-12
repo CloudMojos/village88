@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    /* outline: 1px solid red; */
+}
+
+.container {
+    width: 100vw;
+    height: 99vh;
+}
+
+    .container .sidebar {
+        display: inline-block;
+        vertical-align: top;
+        height: inherit;
+        background-color: whitesmoke;
+        border-right: 2px solid silver;
+        width: 15vw;
+    }
+
+    .container .main-content {
+        display: inline-block;
+        height: inherit;
+        width: 70vw;
+        padding-left: 7vw;
+    }
+
+        .container .main-content .callout {
+            border: 2px solid silver;
+            border-radius: 5px;
+            padding-left: 20px;
+        }
+
+    .container p {
+        padding: 8px;
+    }
+
+    

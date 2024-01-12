@@ -1,0 +1,49 @@
+/*CSS reset settings here*/
+*{
+    margin: 0px;
+    padding: 0px;
+}  
+
+body {
+    width: 1000px;
+    margin: 0px auto;
+}
+
+header {
+    margin: 20px auto;
+}
+
+header > * {
+    /* border: 1px solid red; */
+    display: inline-block;
+    text-align: center;
+    min-width: 330px;
+}
+
+header > #previous {
+    text-align: start;
+}
+
+header > #next {
+    text-align: right;
+}
+
+.img-container > img {
+    height: 100px;
+}
+
+.calendar-row {
+    text-align: center;
+}
+
+.calendar-data {
+    box-sizing: border-box;
+    display: inline-block;
+    min-height: 60px;
+    min-width: 133px;
+    background-color: aqua;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1rem;
+    margin: 1px;
+}

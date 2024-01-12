@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 80vw;
+    margin: 20px auto;
+}
+    .container .hero {
+        padding: 10px;
+        text-align: center;
+    }
+        .container .hero img {
+            display: inline-block;
+            min-height: 120px;
+            max-width: 130px;
+            object-fit: cover;
+            object-position: 75%;
+        }
+        .container .hero .name-and-contact {
+            box-sizing: border-box;
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+            width: 70%;
+            margin: 0 3vw;
+        }
+        .container .hero .name-and-contact > * {
+            display: block;
+            margin-bottom: 25px;
+        }
+            /* .container .hero .name-and-contact .name {
+
+            } */
+            .container .hero .name-and-contact .line-separator {
+                height: 3px;
+                width: 100%;
+                border-radius: 10px;
+                background-color: gray;
+            }
+    .container .about-me {
+        padding: 30px;
+    }
+        .container .about-me h3 {
+            text-align: center;
+        }
+    
+
