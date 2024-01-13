@@ -1,0 +1,21 @@
+#### A New Project
+
+You are very new to the company and your supervisor has given you a new project. This communication was done over Slack and your supervisor gave you some general instruction for the project but you still had a lot of questions/confusions about the project. Your supervisor was expecting you to finish this project by Wednesday the following week but you haven’t really made that much progress on the project yet, due to other projects you were working on and because your supervisor is known to be extremely busy and you felt shy asking for some time to go over the project.
+
+Please answer the following questions:
+
+1. What went wrong with this scenario?
+	- I wasn't proactive enough to ask about the specifications about the project, in the end, shyness only let me down.
+2. What could you have done to improve this situation?
+    - That I asked for the details so that I wouldn't have to waste time on being confused about the project.
+3. What would you do to rectify this situation?
+	- It is likely that the project is really important and that I should have to deliver on time, I would sacrifice the perception of my supervisor against me and that I'm annoying just for this scenario and ask about the specifications for the project immediately.
+
+If you could have gone back in time to a week before (when the supervisor first gave you that project and you had some uncertainties/questions back then), draft what that email communication would have looked like.
+
+To {supervisor}, 
+From: Joshuel Ernest Simbulan
+
+Subject: Specification for Project 169
+
+Content: Good day, ma'am/sir {supervisor}. I understand that Project 169 is important for next week's meeting. If I may ask, can you enlighten me about what "Create a hot dog app" means for the audience on the market? Do we have to create a map api that lets the user know near hot dog shops? Or maybe just a wallpaper engine that displays hot dogs? Your reply is very much appreciated. Thank you.
