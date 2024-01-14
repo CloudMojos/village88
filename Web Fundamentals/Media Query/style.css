@@ -1,0 +1,40 @@
+button {
+    width: 150px;
+    height: 100px;
+    font-size: 30px;
+}
+.btn-group {
+    display: inline-block;
+}
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+    button {
+        font-size: 20px;
+        background-color: pink;
+        display: block;
+    }
+    .btn-group {
+        display: block;
+    }
+}
+/* Tablet */
+@media only screen and (min-width: 481px) {
+    button {
+        font-size: 30px;
+        background-color: orange;
+    }
+    .btn-group {
+        display: block;
+    }
+}
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+    button {
+        font-size: 40px;
+        background-color: green;
+    }
+    .btn-group {
+        display: inline-block;
+    }
+}
