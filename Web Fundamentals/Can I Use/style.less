@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@nav-color: rgba(255,255,255,0.1);
+@search-color: #C75000;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    .main {
+        width: 90%;
+        margin: 0 auto;
+    }
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    height: 100vh;
+    background-image: url(img/caniuse-bg.png);
+    nav {
+        display: flex;
+        justify-content: space-between;
+        font-weight: normal;
+        .nav-list {
+            .nav-item {
+                font-size: 1.75em;
+                display: inline-block;
+                list-style-type: none;
+                padding: 13px 15px;
+                background-color: @nav-color;
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .search-container {
+        display: flex;
+        justify-content: center;
+        background-color: @search-color;
+        color: white;
+        margin: 1rem 0;
+        padding: 2rem;
+        font-size: 2.5em;
+        .search-box {
+            margin: 0 10px;
+        }
+    }
+    .content {
+        background-color: #f2e9d6;
+        padding: 18px;
+        h1 {
+            margin: 0;
+            margin-bottom: 15px;   
+        }
+        h2 {
+            font-size: 1.25em;
+            line-height: 1.7;
+        }
+        h1, h2 {
+            font-weight: normal;
+            width: 45%;
+        }
+        .table {
+            height: 20vw;
+            // border: 1px solid red;
+            margin: 20px;
+            // overflow-x: scroll;
+            .browser-component {
+                // border: 1px solid blue;
+                display: inline-block;
+                p {
+                    font-size: 1.15rem;
+                    // font-weight: 900;
+                    margin-bottom: 1rem;
+                    text-align: center;
+                }
+                .browser-version {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid black;
+                    margin: 1px;
+                    min-height: 2.5rem;
+                    width: 6rem;
+                    text-align: center;
+                    p {
+                        margin: 0;
+                        font-size: 1.25em;
+                    }
+                }
+            }
+        }
+    }
+}
