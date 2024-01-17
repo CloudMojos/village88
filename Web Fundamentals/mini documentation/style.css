@@ -55,7 +55,7 @@ body {
         }
         button {
             display: inline-block;
-            max-width: 20%;
+            max-width: 27%;
             vertical-align: top;
             font-size: 1.5rem;
             border: 1px solid black;
@@ -67,11 +67,15 @@ body {
         }
         p {
             font-size: 1.5rem;
-            width: 80%;
+            max-width: 70%;
             display: inline-block;
             /* border: 1px solid black; */
         }
     } 
+}
+
+.pred {
+    color: red;
 }
 
 

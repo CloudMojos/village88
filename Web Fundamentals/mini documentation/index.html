@@ -4,8 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Mini Documentation</title>
-    <script></script>
+    <script>
+        $(document).ready(() => {
+            $('#show ~ p').hide();
+            $('#slide-down ~ p').hide();
+            $('#fade-in ~ p').hide();
+
+            $('#click + button').click(() => {
+                alert("The button has been clicked!");
+            }) 
+            $('#hide + button').click(() => {
+                $('#hide ~ p').hide();
+            })
+            $('#show + button').click(() => {
+                $('#show ~ p').show();
+            }) 
+            $('#toggle + button').click(() => {
+                $('#toggle ~ p').toggle();
+            }) 
+            $('#slide-down + button').click(() => {
+                $('#slide-down ~ p').slideDown();
+            }) 
+            $('#slide-up + button').click(() => {
+                $('#slide-up ~ p').slideUp();
+            }) 
+            $('#slide-toggle + button').click(() => {
+                $('#slide-toggle ~ p').slideToggle();
+            }) 
+            $('#fade-in + button').click(() => {
+                $('#fade-in ~ p').fadeIn();
+            }) 
+            $('#fade-out + button').click(() => {
+                $('#fade-out ~ p').fadeOut();
+            }) 
+            $('#add-class + button').click(() => {
+                $('#add-class ~ p').addClass('pred');
+            }) 
+            $('#before + button').click(() => {
+                $('#before ~ p').before("I am inserted before this paragraph!")
+            }) 
+            $('#after + button').click(() => {
+                $('#after ~ p').after("I am inserted after this paragraph!")
+            }) 
+            $('#append + button').click(() => {
+                $('#append ~ p').append(" I am appended to this paragraph!")
+            }) 
+            $('#html + button').click(() => {
+                alert($('#html ~ p').html());
+            }) 
+            $('#attr + button').click(() => {
+                alert($('#attr ~ p').attr("class"))
+            }) 
+            $('#val + button').click(() => {
+                console.log("I am clicked")
+                alert($('#val ~ form input[type="text"]').val());
+            }) 
+            $('#text + button').click(() => {
+                alert($('#text ~ p').text());
+            }) 
+        })
+    </script>
 </head>
 <body>
     <section class="sidebar">
@@ -16,10 +77,10 @@
             <li><a href="#toggle">.toggle()</a></li>
             <li><a href="#slide-down">.slideDown()</a></li>
             <li><a href="#slide-up">.slideUp()</a></li>
-            <li><a href="#slide-toggle">.slide-toggle()</a></li>
+            <li><a href="#slide-toggle">.slideToggle()</a></li>
             <li><a href="#fade-in">.fadeIn()</a></li>
             <li><a href="#fade-out">.fadeOut()</a></li>
-            <li><a href="#add-close">.addClose()</a></li>
+            <li><a href="#add-class">.addClass()</a></li>
             <li><a href="#before">.before()</a></li>
             <li><a href="#after">.after()</a></li>
             <li><a href="#append">.append()</a></li>
@@ -49,72 +110,75 @@
         <div class="card">
             <h3 id="toggle">Toggle</h3>
             <button>.toggle()</button>
-            <p></p>
+            <p>Display or hide the matched elements. Example: Toggling the display of this paragraph.</p>
         </div>
         <div class="card">
             <h3 id="slide-down">Slide Down</h3>
             <button>.slideDown()</button>
-            <p></p>
+            <p>Display the matched elements with a sliding motion. Example: Sliding down this paragraph.</p>
         </div>
         <div class="card">
             <h3 id="slide-up">Slide Up</h3>
             <button>.slideUp()</button>
-            <p></p>
+            <p>Hide the matched elements with a sliding motion. Example: Sliding up this paragraph.</p>
         </div>
         <div class="card">
             <h3 id="slide-toggle">Slide Toggle</h3>
             <button>.slideToggle()</button>
-            <p></p>
+            <p>Display or hide the matched elements with a sliding motion. Example: Toggling the display of this paragraph with sliding motion.</p>
         </div>
         <div class="card">
             <h3 id="fade-in">Fade In</h3>
             <button>.fadeIn()</button>
-            <p></p>
+            <p>Display the matched elements by fading them to opaque. Example: This paragraph.</p>
         </div>
         <div class="card">
             <h3 id="fade-out">Fade Out</h3>
             <button>.fadeOut()</button>
-            <p></p>
+            <p>Hide the matched elements by fading them to transparent. Example: This paragraph</p>
         </div>
         <div class="card">
-            <h3 id="add-close">Add Close</h3>
-            <button>.addClose()</button>
-            <p></p>
+            <h3 id="add-class">Add Class</h3>
+            <button>.addClass()</button>
+            <p>Add class to the targeted element. Example: adding color red to this paragraph.</p>
         </div>
         <div class="card">
             <h3 id="before">Before</h3>
             <button>.before()</button>
-            <p></p>
+            <p>Insert content, specified by the parameter, before each element in the set of matched elements. Example: Adding a new string before this paragraph element.</p>
         </div>
         <div class="card">
             <h3 id="after">After</h3>
             <button>.after()</button>
-            <p></p>
+            <p>Insert content, specified by the parameter, after each element in the set of matched elements. Example: Adding a new string after this paragraph element.</p>
         </div>
         <div class="card">
             <h3 id="append">Append</h3>
             <button>.append()</button>
-            <p></p>
+            <p>Insert content, specified by the parameter, to the end of each element in the set of matched elements. Example: Appending a new string to this paragraph element.</p>
         </div>
         <div class="card">
             <h3 id="html">HTML</h3>
             <button>.html()</button>
-            <p></p>
+            <p>Get the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched element. Example: displaying the elements of this paragraph.</p>
         </div>
         <div class="card">
             <h3 id="attr">Attribute</h3>
             <button>.attr()</button>
-            <p></p>
+            <p class="pred">Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element. Example: viewing the values of class attribute of this paragraph.</p>
         </div>
         <div class="card">
             <h3 id="val">Val</h3>
             <button>.val()</button>
-            <p></p>
+            <p>Get the current value of the first element in the set of matched elements or set the value of every matched element. Example: Getting the value of the textbox below.</p>
+            <form>
+                <input type="text" value="I love caulk">
+            </form>
         </div>
         <div class="card">
             <h3 id="text">Text</h3>
             <button>.text()</button>
-            <p></p>
+            <p>Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements. Example: dislaying the text of this paragraph.</p>
         </div>
     </div>
 </body>
