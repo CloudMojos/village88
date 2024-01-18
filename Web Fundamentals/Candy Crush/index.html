@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Candy Crush</title>
+    <script>
+        $(document).ready(() => {
+            $('.candy-wrapper').click(function() {
+                $(this).hide();
+            })
+            $('button').click(function() {
+                location.reload();
+            })
+        })
+    </script>
+</head>
+<body>
+    <section id="board">
+        <div class="row">
+            <div class="candy-wrapper"><img src="img/orange_candy.png" alt="" class="candy"></div>
+            <div class="candy-wrapper"><img src="img/red_candy.png" alt="" class="candy"></div>
+            <div class="candy-wrapper"><img src="img/yellow_candy.png" alt="" class="candy"></div>
+            <div class="candy-wrapper"><img src="img/yellow_candy.png" alt="" class="candy"></div>
+        </div>
+        <div class="row">
+            <div class="candy-wrapper"><img src="img/orange_candy.png" alt="" class="candy"></div>
+            <div class="candy-wrapper"><img src="img/red_candy.png" alt="" class="candy"></div>
+            <div class="candy-wrapper"><img src="img/yellow_candy.png" alt="" class="candy"></div>
+            <div class="candy-wrapper"><img src="img/yellow_candy.png" alt="" class="candy"></div>
+        </div>
+        <div class="row">
+            <div class="candy-wrapper"><img src="img/orange_candy.png" alt="" class="candy"></div>
+            <div class="candy-wrapper"><img src="img/red_candy.png" alt="" class="candy"></div>
+            <div class="candy-wrapper"><img src="img/yellow_candy.png" alt="" class="candy"></div>
+            <div class="candy-wrapper"><img src="img/yellow_candy.png" alt="" class="candy"></div>
+        </div>
+        <div class="row">
+            <div class="candy-wrapper"><img src="img/orange_candy.png" alt="" class="candy"></div>
+            <div class="candy-wrapper"><img src="img/red_candy.png" alt="" class="candy"></div>
+            <div class="candy-wrapper"><img src="img/yellow_candy.png" alt="" class="candy"></div>
+            <div class="candy-wrapper"><img src="img/yellow_candy.png" alt="" class="candy"></div>
+        </div>
+    </section>
+    <button id="reset">Reset</button>
+</body>
+</html>
