@@ -1,0 +1,17 @@
+# Meeting Scheduled
+
+Your supervisor wanted to meet with you at 3 pm (over Zoom) to go over a few items. It’s 3:05 pm now but your supervisor hasn’t shown up yet. It’s now 3:15 pm now and your supervisor still hasn’t shown up yet. You log off from Zoom and continue with your work.
+
+Please answer the following questions:
+
+1. What went wrong here?
+	1. My supervisor probably got caught in other works requiring their attention and I should've notified them after the meeting time has passed.
+2. If you were super proactive in your communication, what would you have done? What message would you send your supervisor and when would you send this?
+	1. I would notify my supervisor at 3:00 pm. I will ask them to follow up with an email and I would let them decide if they want to reschedule a meeting if they couldn't come or just send me a list of the things they want to go over.
+
+Draft the communications you would send to your supervisor and when you would send each of these communications.
+
+To {supervisor},
+From Joshuel Ernest Q. Simbulan,
+
+Good day, {supervisor}. I would like to notify you that we have a meeting regarding some of the details that you want me to be aware of. I understand that you might not be able to attend our meeting. If possible, may I know if we're going to reschedule at a later date? Much appreciated. Thank you.

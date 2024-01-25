@@ -1,0 +1,61 @@
+
+1. What's the query for creating this new database table with the fields above?
+```SQL
+CREATE TABLE `hackerhero_practice`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `first_name` VARCHAR(255) NOT NULL,
+  `last_name` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `encrypted_password` VARCHAR(255) NOT NULL,
+  `created_at` DATETIME NOT NULL,
+  `updated_at` DATETIME NOT NULL,
+  PRIMARY KEY (`id`));
+```
+2. What's the query for inserting new records into this table?  Write queries for inserting three fake users into the table (one query for each insert).
+```SQL
+INSERT INTO users (first_name, last_name, email, encrypted_password, created_at, updated_at) VALUES ('John', 'Doe', 'johndoe@example.com', 'password', NOW(), NOW());
+INSERT INTO users (first_name, last_name, email, encrypted_password, created_at, updated_at) VALUES ('Jane', 'Doe', 'janedoe@example.com', 'password', NOW(), NOW());
+INSERT INTO users (first_name, last_name, email, encrypted_password, created_at, updated_at) VALUES ('Bob', 'Smith', 'bobsmith@example.com', 'password', NOW(), NOW());
+```
+3. What's the query for updating one of the user records?  For example, if you wanted to update the user record for id = 1, with some fake data, what would the query be?
+```SQL
+UPDATE users SET first_name = 'Bubo' WHERE id = 1;
+```
+4. What query would you run for updating all of the user records with the last_name of 'Choi'?
+```SQL
+SET SQL_SAFE_UPDATES = 0;
+UPDATE users SET last_name = 'Choi' WHERE true;
+SET SQL_SAFE_UPDATES = 1;
+```
+5. What query would you run for updating all the user records where ID is 3, 5, 7, 12, or 19?
+```SQL
+UPDATE users SET first_name = "Michael" WHERE id IN (3, 5, 7, 12, 19);
+```
+6. What's the query for deleting a user record where id = 1?
+```SQL
+DELETE from users WHERE id = 1;
+```
+7. What's the query for deleting the entire users records in the users table?
+```SQL
+SET SQL_SAFE_UPDATES = 0;
+DELETE from users;
+SET SQL_SAFE_UPDATES = 1;
+```
+8. What's the query for dropping the entire users table?  What's the difference between dropping the table and deleting all records?
+```SQL
+DROP TABLE users; 
+```
+Dropping a table means deleting the table, deleting all record will not delete the table and just makes it empty.
+9. What's the query for altering the email field to have it be 'email_address' instead?
+```SQL
+ALTER TABLE users CHANGE COLUMN email email_address VARCHAR(255);
+```
+10. What's the query for altering the id so that it's a BIGINT instead?
+```SQL
+ALTER TABLE users MODIFY COLUMN id BIGINT;
+```
+11. What's the query for adding a new field to the users table called is_active where it's a Boolean (meaning it's either a 0 or a 1).  Imagine you wanted the default value of this to be 0 when a new record is created and you won't allow this field to ever be NULL.  With this in mind, now come up with a query.
+```SQL
+ALTER TABLE users ADD COLUMN is_active BOOLEAN NOT NULL DEFAULT 0;
+```
+
