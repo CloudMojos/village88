@@ -4,7 +4,8 @@
         if ($x % 3 == 0) { // check if $x is divisible by 3
             echo "Multiple";
         } else {
-            echo "Not multiple"
+            echo "Not multiple";
         }
+        echo "<br>";
     }
 ?> 
