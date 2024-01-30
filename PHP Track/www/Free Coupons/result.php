@@ -1,9 +1,13 @@
 <?php
-$name = $_POST['name'];
-$course = $_POST['phone'];
+// $name = $_POST['name'];
+// $course = $_POST['phone'];
 
+require('new-connection.php');
 
-
+$table = "entries";
+$query = "SELECT * FROM $table";
+$result = fetch_all($query);
+var_dump($result);
 ?>
 
 <!DOCTYPE html>

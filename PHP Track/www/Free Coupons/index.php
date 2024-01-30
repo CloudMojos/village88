@@ -1,3 +1,7 @@
+<?php 
+    require('new-connection.php');
+    var_dump($connection);    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
