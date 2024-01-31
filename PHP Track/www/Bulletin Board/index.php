@@ -32,7 +32,8 @@
         <textarea name="subject" id="subject" cols="30" rows="1"></textarea>
         <label for="details">Details</label>
         <textarea name="details" id="details" cols="30" rows="5"></textarea>
-        <input type="submit" value="Submit">
+        <input type="button" value="Skip">
+        <input type="submit" value="Add">
     </form>
 </body>
 </html>
