@@ -8,7 +8,7 @@
     <title>📌 Bulletin Board </title>
     <style>
         * {
-            margin: 20px;
+            margin: 10px;
         }
         body {
             width: 80vw;
@@ -24,6 +24,20 @@
     </style>
 </head>
 <body>
+<?php 
+    var_dump($_SESSION['error_messages']);
+    if (count($_SESSION['error_messages']) > 0) {
+        echo "<ul>";
+        foreach ($_SESSION['error_messages'] as $message) {
+            echo "<li>$message</li>";
+        }
+        echo "</ul>";
+    } else if (isset($_SESSION['form_submitted'])) {
+        echo "<h3>Thank you for your patience! Please wait for a response from our IT team.</h3>";
+    }
+
+    $_SESSION['error_messages'] = [];
+?>
     <h3>Bulletin Board Entry</h3>
     <form action="process.php" method="POST">
         <input type='hidden' name='action' value='entry'>
