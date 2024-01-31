@@ -6,6 +6,11 @@
         'details' => $_POST['details'],
     );
 
+    if (isset($_POST['skip'])) {
+        header('Location: main.php');
+        exit;
+    }
+
     // Hidden input 'to. Hindi 'to yung attribute ng form.
     if (isset($_POST['action']) && $_POST['action'] == 'entry') {
         $errors = array();

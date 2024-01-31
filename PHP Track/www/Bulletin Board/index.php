@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📌 Bulletin Board </title>
+    <title>📌 Bulletin Board</title>
     <style>
         * {
             margin: 10px;
@@ -38,7 +38,7 @@
 
     $_SESSION['error_messages'] = [];
 ?>
-    <h3>Bulletin Board Entry</h3>
+    <h1>Bulletin Board Entry</h1>
     <form action="process.php" method="POST">
         <input type='hidden' name='action' value='entry'>
 
@@ -46,8 +46,8 @@
         <textarea name="subject" id="subject" cols="30" rows="1"></textarea>
         <label for="details">Details</label>
         <textarea name="details" id="details" cols="30" rows="5"></textarea>
-        <input type="button" value="Skip">
-        <input type="submit" value="Add">
+        <input type="submit" name="skip" value="Skip">
+        <input type="submit" name="add" value="Add">
     </form>
 </body>
 </html>
