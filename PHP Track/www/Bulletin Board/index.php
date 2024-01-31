@@ -25,7 +25,9 @@
 </head>
 <body>
     <h3>Bulletin Board Entry</h3>
-    <form action="process.php">
+    <form action="process.php" method="POST">
+        <input type='hidden' name='action' value='entry'>
+
         <label for="subject">Subject</label>
         <textarea name="subject" id="subject" cols="30" rows="1"></textarea>
         <label for="details">Details</label>
