@@ -48,7 +48,7 @@
         <input type='hidden' name='action' value='login'>
 
         <label for="email">Email: </label>
-        <input type="email" name="email" id="email">
+        <input type="text" name="email" id="email">
 
         <label for="password">Password: </label>
         <input type="password" name="password" id="password">
@@ -56,5 +56,6 @@
         <input type="submit" name="login" value="Login">
     </form>
     <p>Don't have an account? <a href="register.php">Register instead.</a></p>
+    <a href="i-forgor.php">Forgot password</a>
 </body>
 </html>

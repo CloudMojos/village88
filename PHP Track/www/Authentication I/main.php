@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +14,7 @@
             width: 80vw;
             margin: 0 auto;
         }
-        h1 {
+        h1, h3 {
             text-align: center;
         }
         div {
@@ -22,23 +24,9 @@
     </style>
 </head>
 <body>
-    <h1>Bulletin Board View</h1>
-
-<?php 
-    require_once('new-connection.php');
-    // query fetch
-    $query = "SELECT * FROM $table";
-    $result = fetch_all($query);
-    foreach ($result as $key => $value) {
-?>
-         <div>
-         <p style="display: inline-block;"><?= $value['date_created'] ?></p> 
-         <h3 style="display: inline-block;"><?= $value['subject'] ?></h3>
-         <p><?= $value['details'] ?></p>
-        </div>
-<?php
-    }
-?>
+    <h1>🌞</h1>
+    <h1>Morning, sunshine!</h1>
+    <h3>Morning, <?= $_SESSION['user']['first_name'] ?></h3>
 
 </body>
 </html>
