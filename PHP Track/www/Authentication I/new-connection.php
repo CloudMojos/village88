@@ -2,7 +2,7 @@
 /*--------------------BEGINNING OF THE CONNECTION PROCESS------------------*/
 //define constants for db_host, db_user, db_pass, and db_database
 $db = 'hackerhero_practice';
-$table = 'authentication_one';
+$table = 'authentication_1';
 //adjust the values below to match your database settings
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');

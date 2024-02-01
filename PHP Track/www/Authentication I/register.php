@@ -39,13 +39,10 @@
             echo "<li>$message</li>";
         }
         echo "</ul>";
-    } else if (isset($_SESSION['form_submitted'])) {
-        echo "<h3>Thank you for your patience! Please wait for a response from our IT team.</h3>";
-    }
-
+    } 
     $_SESSION['error_messages'] = [];
 ?>
-    <h1>Register</h1>
+    <h1>Register an account</h1>
     <form action="process.php" method="POST">
         <input type='hidden' name='action' value='register'>
 
@@ -56,12 +53,16 @@
         <input type="text" name="last-name" id="last-name">
 
         <label for="email">Enter email:</label>
-        <input type="email" name="email" id="email">
+        <input type="text" name="email" id="email">
 
         <label for="password">Enter password:</label>
         <input type="password" name="password" id="password">
 
+        <label for="repeat-password">Repeat Password: </label>
+        <input type="password" name="repeat-password" id="repeat-password">
+
         <input type="submit" value="Register">
     </form>
+    <p>Already have an account? <a href="index.php">Login instead.</a></p>
 </body>
 </html>
