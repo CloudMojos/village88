@@ -1,7 +1,10 @@
 <?php 
     require('new-connection.php');
     session_start();
-    
+
+    $table_replies = 'replies';
+    $table_reviews = 'reviews';
+    $table_users = 'users';
 
     // Hidden input 'to. Hindi 'to yung attribute ng form.
     if (isset($_POST['action']) && $_POST['action'] == 'register') {
@@ -88,13 +91,14 @@
     }
 
     function in_db($string, $field) { 
-        $query = "SELECT * FROM authentication_1 WHERE email = '{$string}'";
+        $query = "SELECT * FROM authentication_1 WHERE $field = '{$string}' ";
         return fetch_record($query);
     }
 
     function _register_user($post) {
         // First name validation
         $errors = array();
+        global $table_users;
         if (empty($_POST['first-name'])) {
             $errors[] = "First name must not be empty";
         } else if (strlen($_POST['first-name']) < 2) {
@@ -117,7 +121,7 @@
             $errors[] = "Please provide an email";
         } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             $errors[] = "Please provide a valid email";
-        } else if (in_db($_POST['email'], 'email')) {
+        } else if (in_db($_POST['email'], "email")) {
             $errors[] = "Email already exists"; 
         }
 
@@ -152,12 +156,11 @@
         } else {
             $salt = bin2hex(openssl_random_pseudo_bytes(10));
             $encrypted_password = md5($_POST['password'] . '' . $salt);
-            $query = "INSERT INTO authentication_1(first_name, last_name, email, phone, salt, password, created_at, updates_at) 
-                            VALUES('{$_POST['first-name']}', '{$_POST['last-name']}', '{$_POST['email']}', '{$_POST['phone']}', '$salt', '$encrypted_password', NOW());";
+            $query = "INSERT INTO {$table_users}(first_name, last_name, email, phone, salt, password, created_at, updated_at) 
+                            VALUES('{$_POST['first-name']}', '{$_POST['last-name']}', '{$_POST['email']}', '{$_POST['phone']}', '$salt', '$encrypted_password', NOW(), NOW());";
             // echo $query;
             run_mysql_query($query);
         }
         header('Location: register.php');
     }
-    // "INSERT INTO {$table}(name, phone_number, date_created) VALUES('{$name}', '{$phone}', NOW())";
 ?>

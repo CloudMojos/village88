@@ -65,8 +65,6 @@
         else if (!check_password($_POST['password'], $user['salt'], $user['password'])) {
             $errors[] = "Password is incorrect";
         }
-        
-        echo check_password($_POST['password'], $user['salt'], $user['password']);
 
         if (!empty($errors)) {  
             $_SESSION['error_messages'] = $errors;
@@ -121,41 +119,41 @@
             $errors[] = "Email already exists"; 
         }
 
-        // // Phone validation
-        // if (!preg_match('/^09\d{9}$/', $_POST['phone'])) {
-        //     $errors[] = "Please provide valid phone number";
-        // }
+        // Phone validation
+        if (!preg_match('/^09\d{9}$/', $_POST['phone'])) {
+            $errors[] = "Please provide valid phone number";
+        }
 
-        // // Password validation
-        // if (empty($_POST['email'])) {
-        //     $errors[] = "Please provide an email";
-        // } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-        //     $errors[] = "Please provide a valid email";
-        // } 
+        // Password validation
+        if (empty($_POST['email'])) {
+            $errors[] = "Please provide an email";
+        } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $errors[] = "Please provide a valid email";
+        } 
 
-        // // Password validation
-        // if (empty($_POST['password'])) {
-        //     $errors[] = "Please provide a password";
-        // } else if (strlen($_POST['password']) < 8) {
-        //     $errors[] = "Password must be longer than 8 characters";
-        // } 
+        // Password validation
+        if (empty($_POST['password'])) {
+            $errors[] = "Please provide a password";
+        } else if (strlen($_POST['password']) < 8) {
+            $errors[] = "Password must be longer than 8 characters";
+        } 
 
-        // // Repeat password validation
-        // if (strcmp($_POST['repeat-password'], $_POST['password']) != 0) {
-        //     $errors[] = "Password must match";
-        // }
+        // Repeat password validation
+        if (strcmp($_POST['repeat-password'], $_POST['password']) != 0) {
+            $errors[] = "Password must match";
+        }
 
         var_dump($errors);
 
         if (!empty($errors)) {
             $_SESSION['error_messages'] = $errors;
         } else {
-            // $salt = bin2hex(openssl_random_pseudo_bytes(10));
-            // $encrypted_password = md5($_POST['password'] . '' . $salt);
-            $query = "INSERT INTO authentication_1(first_name, last_name, email, created_at, updated_at) 
-                            VALUES('{$_POST['first-name']}', '{$_POST['last-name']}', '{$_POST['email']}', NOW(), NOW());";
-            // echo $query;
-            run_mysql_query($query);
+            $salt = bin2hex(openssl_random_pseudo_bytes(10));
+            $encrypted_password = md5($_POST['password'] . '' . $salt);
+            $query = "INSERT INTO authentication_1(first_name, last_name, email, phone, salt, password, created_at) 
+                            VALUES('{$_POST['first-name']}', '{$_POST['last-name']}', '{$_POST['email']}', '{$_POST['phone']}', '$salt', '$encrypted_password', NOW());";
+            echo $query;
+            run_mysql_query($query); 
         }
         header('Location: register.php');
     }

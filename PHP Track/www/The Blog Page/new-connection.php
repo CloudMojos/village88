@@ -2,9 +2,6 @@
 /*--------------------BEGINNING OF THE CONNECTION PROCESS------------------*/
 //define constants for db_host, db_user, db_pass, and db_database
 $db = 'the_blog_page';
-$table_replies = 'replies';
-$table_reviews = 'reviews';
-$table_users = 'users';
 //adjust the values below to match your database settings
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
