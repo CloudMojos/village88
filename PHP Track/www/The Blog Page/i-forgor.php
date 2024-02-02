@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔐 Authentication I</title>
+    <title>📄 The Blog Page</title>
     <style>
         * {
             padding: 0px;
@@ -48,12 +48,12 @@
         <input type='hidden' name='action' value='forgot-password'>
 
         <label for="email">Email: </label>
-        <input type="email" name="email" id="email">
+        <input type="text" name="email" id="email">
 
         <label for="phone">Contact number:</label>
         <input type="tel" id="phone" name="phone">
 
-        <input type="submit" name="login" value="Login">
+        <input type="submit" name="reset" value="Reset">
     </form>
     <p>Don't have an account? <a href="register.php">Register instead.</a></p>
     

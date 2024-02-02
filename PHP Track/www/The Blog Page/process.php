@@ -2,19 +2,43 @@
     require('new-connection.php');
     session_start();
 
-    $table_replies = 'replies';
-    $table_reviews = 'reviews';
-    $table_users = 'users';
+    $GLOBALS['table_replies'] = 'replies';
+    $GLOBALS['table_reviews'] = 'reviews';
+    $GLOBALS['table_users'] = 'users';
 
     // Hidden input 'to. Hindi 'to yung attribute ng form.
     if (isset($_POST['action']) && $_POST['action'] == 'register') {
         _register_user($_POST);
     }
-    if (isset($_POST['action']) && $_POST['action'] == 'login') {
+    else if (isset($_POST['action']) && $_POST['action'] == 'login') {
        _login_user($_POST);
     }
-    if (isset($_POST['action']) && $_POST['action'] == 'forgot-password') {
+    else if (isset($_POST['action']) && $_POST['action'] == 'forgot-password') {
         _reset_password($_POST);
+    }
+    else if (isset($_POST['action']) && $_POST['action'] == 'review') {
+        _post_review($_POST);
+    }
+    else {
+        session_destroy();
+        header('Location: index.php');
+    }
+
+    function _post_review($post) {
+        // Check current user
+        var_dump($_SESSION['user']);
+        // Text validation
+        if (empty($_POST['review'])) {
+            $errors[] = "Review must not be empty.";
+        }
+
+        if (!empty($errors)) {  
+            $_SESSION['error_messages'] = $errors;
+        } else {
+            $query = "INSERT INTO {$GLOBALS['table_reviews']} (users_id, content, created_at, updated_at) VALUES ('{$_SESSION['user']['id']}', '{$_POST['review']}', NOW(), NOW())";
+            run_mysql_query($query);
+        }
+        header('Location: main.php');
     }
 
     function _reset_password($post) {
@@ -45,8 +69,9 @@
         } else {
             $_SESSION['user'] = $user;
             $encrypted_password = md5('village88'. '' . $user['salt']);
-            $query = "UPDATE authentication_1 SET password = '{$encrypted_password}' WHERE email = '{$user['email']}' AND phone = '{$user['phone']}';";
-            header('Location: main.php');
+            $query = "UPDATE {$GLOBALS['table_users']} SET password = '{$encrypted_password}' WHERE email = '{$user['email']}' AND phone = '{$user['phone']}';";
+            run_mysql_query($query);
+            header('Location: index.php');
         }
     }
 
@@ -69,7 +94,7 @@
             $errors[] = "Password is incorrect";
         }
         
-        echo check_password($_POST['password'], $user['salt'], $user['password']);
+        // echo check_password($_POST['password'], $user['salt'], $user['password']);
 
         if (!empty($errors)) {  
             $_SESSION['error_messages'] = $errors;
@@ -91,14 +116,13 @@
     }
 
     function in_db($string, $field) { 
-        $query = "SELECT * FROM authentication_1 WHERE $field = '{$string}' ";
+        $query = "SELECT * FROM {$GLOBALS['table_users']} WHERE $field = '{$string}' ";
         return fetch_record($query);
     }
 
     function _register_user($post) {
         // First name validation
         $errors = array();
-        global $table_users;
         if (empty($_POST['first-name'])) {
             $errors[] = "First name must not be empty";
         } else if (strlen($_POST['first-name']) < 2) {
@@ -156,7 +180,7 @@
         } else {
             $salt = bin2hex(openssl_random_pseudo_bytes(10));
             $encrypted_password = md5($_POST['password'] . '' . $salt);
-            $query = "INSERT INTO {$table_users}(first_name, last_name, email, phone, salt, password, created_at, updated_at) 
+            $query = "INSERT INTO {$GLOBALS['table_users']}(first_name, last_name, email, phone, salt, password, created_at, updated_at) 
                             VALUES('{$_POST['first-name']}', '{$_POST['last-name']}', '{$_POST['email']}', '{$_POST['phone']}', '$salt', '$encrypted_password', NOW(), NOW());";
             // echo $query;
             run_mysql_query($query);

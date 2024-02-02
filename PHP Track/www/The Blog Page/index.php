@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔐 Authentication I</title>
+    <title>📄 The Blog Page</title>
     <style>
         * {
             padding: 0px;
@@ -34,7 +34,7 @@
 <?php 
     // header('Location: register.php');
 
-    if (count($_SESSION['error_messages']) > 0) {
+    if (!empty($_SESSION['error_messages'])) {
         echo "<ul>";
         foreach ($_SESSION['error_messages'] as $message) {
             echo "<li>$message</li>";
