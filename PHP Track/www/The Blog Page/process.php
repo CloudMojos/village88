@@ -152,7 +152,7 @@
         } else {
             $salt = bin2hex(openssl_random_pseudo_bytes(10));
             $encrypted_password = md5($_POST['password'] . '' . $salt);
-            $query = "INSERT INTO authentication_1(first_name, last_name, email, phone, salt, password, created_at) 
+            $query = "INSERT INTO authentication_1(first_name, last_name, email, phone, salt, password, created_at, updates_at) 
                             VALUES('{$_POST['first-name']}', '{$_POST['last-name']}', '{$_POST['email']}', '{$_POST['phone']}', '$salt', '$encrypted_password', NOW());";
             // echo $query;
             run_mysql_query($query);

@@ -1,10 +1,8 @@
 <?php
 /*--------------------BEGINNING OF THE CONNECTION PROCESS------------------*/
 //define constants for db_host, db_user, db_pass, and db_database
-$db = 'the_blog_page';
-$table_replies = 'replies';
-$table_reviews = 'reviews';
-$table_users = 'users';
+$db = 'hackerhero_practice';
+$table = 'authentication_1';
 
 //adjust the values below to match your database settings
 define('DB_HOST', 'localhost');
