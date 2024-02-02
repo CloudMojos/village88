@@ -55,6 +55,15 @@
         <label for="email">Enter email:</label>
         <input type="text" name="email" id="email">
 
+        <label for="phone">Contact number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="password">Enter password:</label>
+        <input type="password" name="password" id="password">
+
+        <label for="repeat-password">Repeat Password: </label>
+        <input type="password" name="repeat-password" id="repeat-password">
+
         <input type="submit" value="Register">
     </form>
     <p>Already have an account? <a href="index.php">Login instead.</a></p>

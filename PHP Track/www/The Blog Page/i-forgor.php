@@ -32,7 +32,8 @@
 </head>
 <body>
 <?php 
-    var_dump($_SESSION['error_messages']);
+    // header('Location: register.php');
+
     if (count($_SESSION['error_messages']) > 0) {
         echo "<ul>";
         foreach ($_SESSION['error_messages'] as $message) {
@@ -42,21 +43,19 @@
     } 
     $_SESSION['error_messages'] = [];
 ?>
-    <h1>Register an account</h1>
+    <h1>Forgot Password</h1>
     <form action="process.php" method="POST">
-        <input type='hidden' name='action' value='register'>
+        <input type='hidden' name='action' value='forgot-password'>
 
-        <label for="first-name">Enter first name:</label>
-        <input type="text" name="first-name" id="first-name">
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
 
-        <label for="last-name">Enter last name:</label>
-        <input type="text" name="last-name" id="last-name">
+        <label for="phone">Contact number:</label>
+        <input type="tel" id="phone" name="phone">
 
-        <label for="email">Enter email:</label>
-        <input type="text" name="email" id="email">
-
-        <input type="submit" value="Register">
+        <input type="submit" name="login" value="Login">
     </form>
-    <p>Already have an account? <a href="index.php">Login instead.</a></p>
+    <p>Don't have an account? <a href="register.php">Register instead.</a></p>
+    
 </body>
 </html>
