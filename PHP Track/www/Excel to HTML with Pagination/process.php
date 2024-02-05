@@ -36,7 +36,7 @@
         // echo "<br>";
         // Check if file already exists
         if (file_exists($target_file)) {
-            echo "Sorry, file already exists.";
+            echo "Sorry, {$target_file} already exists.";
             $flag = 0;
         }
 
@@ -71,13 +71,17 @@
         ini_set('auto_detect_line_endings', true);
         $handle = fopen($file, "r");
         $fields = fgetcsv($handle, 1000, ",");
-        // echo "<br>";
-        // echo "fields";
-        // echo "<br>";
-        // var_dump($fields);
+        $tablename = pathinfo($file, PATHINFO_FILENAME);
+        echo "<br>";
+        echo "$tablename";
+        echo "<br>";
+        var_dump($fields);
         // WE CREATE THE TABLE USING THE FIELDS AND FILENAME
-        
-        foreach()
+        echo "<br>";
+        echo implode(" VARCHAR(255) NOT NULL,", $fields);
+        $query = "CREATE TABLE {$tablename}";
+
+        // foreach()
         die();
         // while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 

@@ -86,7 +86,7 @@
         // echo $query;
         // die();
         $reviews = fetch_all($query);
-        var_dump($reviews);
+        // var_dump($reviews);
         foreach($reviews as $review) {
 ?>
         <div class="review">
