@@ -62,10 +62,7 @@
 //     // While sum is not of length 1,
 //     // reduce to find sum.
 //     while (String(num).length > 1) {
-//         num = [num.join()
-//             .split('')
-//             .map(i => Number(i))
-//             .reduce((a, c) => a += c)]
+//         num = [num.join().split('').map(i => Number(i)).reduce((a, c) => a += c)]
 //     }
 //     return num[0]
 // }
