@@ -3,70 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- My CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet/less" type="text/css" href="style.less">
+    <!-- Normalize CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.css"> -->
+    <!-- LESS CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/4.0.0/less.min.js"></script>
     <title>👩‍🎓 Portfolio</title>
 </head>
 <body>
-    <div class="container">
-        <div class="hero">
-            <img src="ivana_funcion/photo_of_me.jpg" alt="my photo">
-            <div class="name-and-contact">
+    <div class="container content">
+        <div class="row hero">
+            <img class="col-12 mx-auto d-block rounded" src="ivana_funcion/photo_of_me.jpg" alt="my photo">
+            <div class="col-sm-12 name-and-contact">
                 <h1 class="name">
-                    Ivana Funcion
+                    IVANA FUNCION
                 </h1>
-                <div class="title">
+                <h5 class="title">
                     Aspiring Full-Stack Web Developer
-                </div>
+                </h5>
                 <div class="line-separator"></div>
                 <div class="contact">
                     (04) 298 1092 3094 • +76 209 2093 1092 • ifuncion@email.com
                 </div>
             </div>
         </div>
-        <div class="about-me">
-            <h3>Getting to know me a little more...</h3>
-            <p>I am aspiring Full Stack Web Developer based in La Union, Philippines. Proficient in both front-end and back end technology. I also have an adequate knowledge in Automation and Cloud Computing Service. My goal is to have more solid knowledge 
+        <div class="row about-me">
+            <h3 class="col-sm-12">Getting to know me a little more...</h3>
+            <p class="col-sm-12">I am aspiring Full Stack Web Developer based in La Union, Philippines. Proficient in both front-end and back end technology. I also have an adequate knowledge in Automation and Cloud Computing Service. My goal is to have more solid knowledge 
                 regarding application development, especially in web application development through employment.
             </p>
             <br>
-            <p>
+            <p class="col-sm-12">
                 I am a recent graduate of Village88 Bootcamp located in La Union, Philippines which teaches full stack 3 months for free. I'm extremely passionate of learning new technologies and am always looking for opportunities 
             </p>
         </div>
         <div class="skills">
             <div class="languages">
                 <h3>What I love to use</h3>
-                <div class="icons">
+                <div class="container icons">
                     <div class="row">
-                        <img src="ivana_funcion/php.png" alt="php icon">
-                        <img src="ivana_funcion/JavaScript.png" alt="javascript icon">
-                        <img src="ivana_funcion/RUBY.png" alt="ruby icon">
-                        <img src="ivana_funcion/python.png" alt="python icon">
-                        <img src="ivana_funcion/HTML.png" alt="php icon">
+                        <div class="col-1"></div>
+                        <img class="col-2" src="ivana_funcion/php.png" alt="php icon">
+                        <img class="col-2" src="ivana_funcion/JavaScript.png" alt="javascript icon">
+                        <img class="col-2" src="ivana_funcion/RUBY.png" alt="ruby icon">
+                        <img class="col-2" src="ivana_funcion/python.png" alt="python icon">
+                        <img class="col-2" src="ivana_funcion/HTML.png" alt="html icon">
+                        <div class="col-1"></div>
                     </div>
                     <div class="row">
-                        <img src="ivana_funcion/MEAN.png" alt="mean icon">
-                        <img src="ivana_funcion/codeigniter.png" alt="codeigniter icon">
-                        <img src="ivana_funcion/c-sharp.png" alt="dotnet icon">
-                        <img src="ivana_funcion/django.png" alt="django icon">
-                        <img src="ivana_funcion/LAMP.png" alt="lamp icon">
+                        <div class="col-1"></div>
+                        <img class="col-2" src="ivana_funcion/MEAN.png" alt="mean icon">
+                        <img class="col-2" src="ivana_funcion/codeigniter.png" alt="codeigniter icon">
+                        <img class="col-2" src="ivana_funcion/c-sharp.png" alt="dotnet icon">
+                        <img class="col-2" src="ivana_funcion/django.png" alt="django icon">
+                        <img class="col-2" src="ivana_funcion/LAMP.png" alt="lamp icon">
+                        <div class="col-1"></div>
                     </div>
                     <div class="row">
-                        <img src="ivana_funcion/jQuery.png" alt="jquery icon">
-                        <img src="ivana_funcion/ajax.png" alt="ajax icon">
-                        <img src="ivana_funcion/socket.png" alt="socket icon">
-                        <img src="ivana_funcion/d3.png" alt="d3 icon">
-                        <img src="ivana_funcion/iOS-Swift.png" alt="swift icon">
+                        <div class="col-1"></div>
+                        <img class="col-2" src="ivana_funcion/jQuery.png" alt="jquery icon">
+                        <img class="col-2" src="ivana_funcion/ajax.png" alt="ajax icon">
+                        <img class="col-2" src="ivana_funcion/socket.png" alt="socket icon">
+                        <img class="col-2" src="ivana_funcion/d3.png" alt="d3 icon">
+                        <img class="col-2" src="ivana_funcion/iOS-Swift.png" alt="swift icon">
+                        <div class="col-1"></div>
                     </div>
                     <div class="row">
-                        <img src="ivana_funcion/bootstrap.png" alt="bootstrap icon">
-                        <img src="ivana_funcion/materialize.png" alt="materialize icon">
-                        <img src="ivana_funcion/mongodb.png" alt="mongodb icon">
-                        <img src="ivana_funcion/mysql.png" alt="mysql icon">
-                        <img src="ivana_funcion/sqlite.png" alt="sqlite icon">
+                        <div class="col-1"></div>
+                        <img class="col-2" src="ivana_funcion/bootstrap.png" alt="bootstrap icon">
+                        <img class="col-2" src="ivana_funcion/materialize.png" alt="materialize icon">
+                        <img class="col-2" src="ivana_funcion/mongodb.png" alt="mongodb icon">
+                        <img class="col-2" src="ivana_funcion/mysql.png" alt="mysql icon">
+                        <img class="col-2" src="ivana_funcion/sqlite.png" alt="sqlite icon">
+                        <div class="col-1"></div>
                     </div>
                 </div>
             </div>

@@ -1,90 +1,49 @@
-/*CSS reset settings here*/
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 * {
-    margin: 0px;
-    padding: 0px;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0;
+    border: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-.row, .container, .container-fluid {
-    margin: 0;
-    --bs-gutter-x: 0;
-    padding: 0;
-}
-#wrapper {
-    width: 100%;
-    // padding: 25px;
-    background-color: #FFD9B7;
-}
-#navbar {
-    #logo-container {
-        min-height: 130px;   
-        #logo {
-            height: 100%;
-            background-color: #B97A57;
-        }
-    }
-    #navigation {
-        min-height: 130px;
-        background-color: #FF7F27;
-    }
-    margin-bottom: 2rem;
-}
-#main-content {
-    padding: 3rem;
-    min-height: 300px;
-    background-color: #880015;
-    #about {
-        min-height: 350px;
-        background-color: #FFAEC9;
-    }
-    #advertisement {
-        min-height: 65px;
-        margin: 0 0 70px 70px;
-        padding-bottom: 225px;
-        background-color: #C8BFE7;
-    }
-    margin-bottom: 15px;
-}
-.sponsors {
-    min-height: 65px;
-    background-color: #FFFF88;
-}
-.sponsors-container:not(:last-of-type) {
-    margin-bottom: 15px;    
+
+body {
+    background: linear-gradient(#c6d2de, #eff0f2, #eff0f2, #c6d2de);
 }
 
-/* Mobile */
-@media only screen and (max-width: 575px) {
-    * {
-        border: 1px solid red;
-    }
-    #advertisement {
-        display: none;
-    }
-    #logo {
-        margin: 0;
-    }
-}   
-/* Tablet */
-@media only screen and (min-width: 576px) {
-    #advertisement {
-        display: none;
-    }
-    #logo {
-        margin: 0;
-    }
-    .sponsors {
-        margin: 10px;
-    }
-}
-/* Desktop */
-@media only screen and (min-width: 1024px) {
-    #advertisement {
-        display: block;
-    }
-    #wrapper {
-        padding: 2rem;
-    }
-    #logo {
-        margin-right: 30px;
+.content {
+    padding: 25px;
+    
+    .hero {
+        margin-bottom: 50px;
+        text-align: center;
+        img {
+            padding: 0;
+            margin: 25px;
+            min-height: 250px;
+            width: 250px;
+            object-fit: cover;
+            object-position: 75%;
+        }
+        .name {
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+        }
+        .title {
+            padding: 0;
+            margin: 0;
+        }
+        .line-separator {
+            border: 2px solid gray;
+            border-radius: 5px;
+            margin: 25px 0;
+        }
     }
 }
+
+    
+
