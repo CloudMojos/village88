@@ -3,6 +3,7 @@
 * {
     font-family: "Varela Round", sans-serif;
     font-weight: 400;
+    font-weight: 900;
     font-style: normal;
     padding: 0;
     border: 0;
@@ -19,7 +20,7 @@ body {
     
     .hero {
         margin-bottom: 50px;
-        text-align: center;
+        // text-align: center;
         img {
             padding: 0;
             margin: 25px;
@@ -28,12 +29,19 @@ body {
             object-fit: cover;
             object-position: 75%;
         }
+        .name-and-contact {
+            margin-top: 30px;
+        }
         .name {
+            font-size: 3rem;
+            color: #2d4767;
+            font-weight: 900;
             padding: 0;
-            margin: 0;
-            font-weight: bold;
+            margin: 1rem 0;
         }
         .title {
+            font-size: 1.5rem;
+            font-weight: 900;
             padding: 0;
             margin: 0;
         }
@@ -41,8 +49,24 @@ body {
             border: 2px solid gray;
             border-radius: 5px;
             margin: 25px 0;
+            margin-top: 3rem;
         }
     }
+}
+
+/* Mobile */
+@media only screen and (max-width: 575px) {
+    .hero {
+        text-align: center;
+    }
+}   
+/* Tablet */
+@media only screen and (min-width: 576px) {
+    
+}
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+    
 }
 
     
