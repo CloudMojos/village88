@@ -5,19 +5,18 @@
     margin: 0;
 }
 
-body > .board {
+body .board {
+    background-color: whitesmoke;
+    border: 20px solid burlywood;
     width: 70vw;
     margin: 50px auto;
     .row {
         display: block;
         width: max-content;
         margin: 0px auto;
-        .img {
+        img {
             display: inline-block;
+            width: 420px;
         }
-    }
-    img {
-        width: 169px;
-        height: 169px;
     }
 }
