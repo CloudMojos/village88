@@ -7,7 +7,6 @@
     box-sizing: border-box;
     font-family: 'Comic Neue', cursive;
 }
-
 body {
     position: relative;;
     width: 98vw;
@@ -15,7 +14,6 @@ body {
     background-image: url(img/background.jpg);
     text-align: center;
 }
-
 #board {
     display: inline-block;
     border-radius: 15px;
@@ -30,14 +28,16 @@ body {
         width: 99%;
         margin: 0px auto;
     }
-    .candy-wrapper {
+    .candy {
         display: inline-block;
-        /* border: 1px solid black; */
         width: 128px;
         height: 128px;
     }
-    .candy {
-        width: inherit;
-        height: inherit;
-    }
+}
+#reset {
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
 }
