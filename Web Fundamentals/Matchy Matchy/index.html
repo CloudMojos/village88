@@ -12,7 +12,15 @@
     <!-- JS/jQuery -->
     <script>
         $(document).ready(() => {
+            setTimeout(() => {
+                $('img').each(function() {
+                    $(this).attr('data-src', $(this).attr('src'));
+                    $(this).attr('src', 'img/blank.png');
+                });
+            }, 2000);
+
             $('img').click(function() {
+                console.log("hello");
                 if ($(this).attr('src') === 'img/blank.png') {
                     $(this).attr('src', $(this).attr('data-src'));
                     $(this).attr('data-src', 'img/blank.png');
@@ -20,14 +28,6 @@
                     $(this).attr('data-src', $(this).attr('src'));
                     $(this).attr('src', 'img/blank.png');
                 }
-                // // Toggle between blank color and image source
-                // if ($(this).attr('src') === '') {
-                //     // If src attribute is empty, set it to image path
-                //     $(this).attr('src', $(this).data('src'));
-                // } else {
-                //     // If src attribute has image path, make it empty
-                //     $(this).attr('src', '');
-                // }
             });
         });
     </script>
@@ -36,25 +36,23 @@
 <body>
     <div class="board">
         <div class="row">
-            <img src="img/blank.png" alt="" data-src="img/baratheon.png">
-            <img src="img/blank.png" alt="" data-src="img/greyjoy.png">
-            <img src="img/blank.png" alt="" data-src="img/martell.png">
-            <img src="img/blank.png" alt="" data-src="img/lannister.png">
+            <img src="img/baratheon.png" data-src="img/blank.png" alt="">
+            <img src="img/greyjoy.png" data-src="img/blank.png" alt="">
+            <img src="img/martell.png" data-src="img/blank.png" alt="">
+            <img src="img/lannister.png" data-src="img/blank.png" alt="">
         </div>
         <div class="row">
-            <img src="img/blank.png" alt="" data-src="img/stark.png">
-            <img src="img/blank.png" alt="" data-src="img/targaryen.png">
-            <img src="img/blank.png" alt="" data-src="img/greyjoy.png">
-            <img src="img/blank.png" alt="" data-src="img/martell.png">
+            <img src="img/stark.png" data-src="img/blank.png" alt="">
+            <img src="img/targaryen.png" data-src="img/blank.png" alt="">
+            <img src="img/greyjoy.png" data-src="img/blank.png" alt="">
+            <img src="img/martell.png" data-src="img/blank.png" alt="">
         </div>
         <div class="row">
-            <img src="img/blank.png" alt="" data-src="img/baratheon.png">
-            <img src="img/blank.png" alt="" data-src="img/lannister.png">
-            <img src="img/blank.png" alt="" data-src="img/targaryen.png">
-            <img src="img/blank.png" alt="" data-src="img/stark.png">
+            <img src="img/baratheon.png" data-src="img/blank.png" alt="">
+            <img src="img/lannister.png" data-src="img/blank.png" alt="">
+            <img src="img/targaryen.png" data-src="img/blank.png" alt="">
+            <img src="img/stark.png" data-src="img/blank.png" alt="">
         </div>
     </div>
 </body>
-</html>
-
 </html>
