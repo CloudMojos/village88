@@ -15,6 +15,7 @@ body {
     text-align: center;
 }
 #board {
+    text-align: start;
     display: inline-block;
     border-radius: 15px;
     background-color: rgba(240, 248, 255, 0.336);
@@ -23,11 +24,6 @@ body {
     width: 92vh;
     min-height: 90vh;
     margin: 20px auto;
-    .row {
-        text-align: start;
-        width: 99%;
-        margin: 0px auto;
-    }
     .candy {
         display: inline-block;
         width: 128px;

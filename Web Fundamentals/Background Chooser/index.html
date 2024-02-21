@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Background Chooser</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script> 
+    <script type="text/javascript">
+        $(document).ready(function(){
+            function removeYellowBorder(){
+                $('.mini_box').each(function(){
+                    $(this).removeClass('yellow_border');
+                });
+            }
+            $('#main_box').click(function(){
+                // Remove the background image.
+                $(this).css('background-image', "url(' ')");
+                // Remove the yellow border
+                removeYellowBorder();
+            })
+            $('.mini_box').click(function(event){
+                // Change the background.
+                let src = $(this).attr('src');
+                $(this).parent().parent().css('background-image', `url('${src}')`);
+                // Remove the yellow border to not selected image.
+                removeYellowBorder();
+                // Add the yellow border to ${this}.
+                $(this).addClass('yellow_border');
+                // Stop propagating to main box
+                event.stopPropagation();
+            })
+        });
+    </script>
+    <style>
+        body {
+            margin: 50px;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px;
+            font-family: Verdana;
+        }
+        #main_box {
+            background-color: lightgray;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+            padding: 10px;
+            #mini_boxes {
+                height: 69vh;
+                width: max-content;
+                vertical-align: middle;
+                overflow-y: scroll;
+                img {
+                    display: block;
+                    width: 200px;
+                    height: 100px;
+                    margin: 10px 10px 15px 10px;
+                }
+                .yellow_border {
+                    outline: 5px solid yellow;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Background Chooser</h1>
+    <div id="main_box">
+        <div id="mini_boxes">
+            <img src="img/background1.gif" class="mini_box">
+            <img src="img/background2.gif" class="mini_box">
+            <img src="img/background3.gif" class="mini_box">
+            <img src="img/background4.gif" class="mini_box">
+            <img src="img/background5.gif" class="mini_box">
+            <img src="img/background6.gif" class="mini_box">
+            <img src="img/background7.gif" class="mini_box">
+            <img src="img/background8.gif" class="mini_box">
+        </div>
+    </div>
+</body>
+</html>
