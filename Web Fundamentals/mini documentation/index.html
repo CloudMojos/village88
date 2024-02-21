@@ -17,56 +17,56 @@
             $('#slide-down ~ p').hide();
             $('#fade-in ~ p').hide();
             // Event Listeners
-            $('#click + button').click(() => {
+            $('#click-button').click(() => {
                 alert("The button has been clicked!");
             }) 
-            $('#hide + button').click(() => {
+            $('#hide-button').click(() => {
                 $('#hide ~ p').hide();
             })
-            $('#show + button').click(() => {
+            $('#show-button').click(() => {
                 $('#show ~ p').show();
             }) 
-            $('#toggle + button').click(() => {
+            $('#toggle-button').click(() => {
                 $('#toggle ~ p').toggle();
             }) 
-            $('#slide-down + button').click(() => {
+            $('#slide-down-button').click(() => {
                 $('#slide-down ~ p').slideDown();
             }) 
-            $('#slide-up + button').click(() => {
+            $('#slide-up-button').click(() => {
                 $('#slide-up ~ p').slideUp();
             }) 
-            $('#slide-toggle + button').click(() => {
+            $('#slide-toggle-button').click(() => {
                 $('#slide-toggle ~ p').slideToggle();
             }) 
-            $('#fade-in + button').click(() => {
+            $('#fade-in-button').click(() => {
                 $('#fade-in ~ p').fadeIn();
             }) 
-            $('#fade-out + button').click(() => {
+            $('#fade-out-button').click(() => {
                 $('#fade-out ~ p').fadeOut();
             }) 
-            $('#add-class + button').click(() => {
+            $('#add-class-button').click(() => {
                 $('#add-class ~ p').addClass('pred');
             }) 
-            $('#before + button').click(() => {
+            $('#before-button').click(() => {
                 $('#before ~ p').before("I am inserted before this paragraph!")
             }) 
-            $('#after + button').click(() => {
+            $('#after-button').click(() => {
                 $('#after ~ p').after("I am inserted after this paragraph!")
             }) 
-            $('#append + button').click(() => {
+            $('#append-button').click(() => {
                 $('#append ~ p').append(" I am appended to this paragraph!")
             }) 
-            $('#html + button').click(() => {
+            $('#html-button').click(() => {
                 alert($('#html ~ p').html());
             }) 
-            $('#attr + button').click(() => {
+            $('#attr-button').click(() => {
                 alert($('#attr ~ p').attr("class"))
             }) 
-            $('#val + button').click(() => {
+            $('#val-button').click(() => {
                 console.log("I am clicked")
                 alert($('#val ~ form input[type="text"]').val());
             }) 
-            $('#text + button').click(() => {
+            $('#text-button').click(() => {
                 alert($('#text ~ p').text());
             }) 
         })
@@ -98,82 +98,82 @@
         <h1 class="title">My Mini Documentation</h1>
         <div class="card">
             <h3 id="click">Click</h3>
-            <button>.click()</button>
+            <button id="click-button">.click()</button>
             <p>Binds an event handler to the "click" JavaScript event, or trigger that event on an element. Example: Clicking the button will display an alert box.</p>
         </div>
         <div class="card">
             <h3 id="hide">Hide</h3>
-            <button>.hide()</button>
+            <button id="hide-button">.hide()</button>
             <p>Hides the matched elements. Example: Hiding this paragraph.</p>
         </div>
         <div class="card">
             <h3 id="show">Show</h3>
-            <button>.show()</button>
+            <button id="show-button">.show()</button>
             <p>Displays the matched elements. Example: Showing the hidden paragraph.</p>
         </div>
         <div class="card">
             <h3 id="toggle">Toggle</h3>
-            <button>.toggle()</button>
+            <button id="toggle-button">.toggle()</button>
             <p>Display or hide the matched elements. Example: Toggling the display of this paragraph.</p>
         </div>
         <div class="card">
             <h3 id="slide-down">Slide Down</h3>
-            <button>.slideDown()</button>
+            <button id="slide-down-button">.slideDown()</button>
             <p>Display the matched elements with a sliding motion. Example: Sliding down this paragraph.</p>
         </div>
         <div class="card">
             <h3 id="slide-up">Slide Up</h3>
-            <button>.slideUp()</button>
+            <button id="slide-up-button">.slideUp()</button>
             <p>Hide the matched elements with a sliding motion. Example: Sliding up this paragraph.</p>
         </div>
         <div class="card">
             <h3 id="slide-toggle">Slide Toggle</h3>
-            <button>.slideToggle()</button>
+            <button id="slide-toggle-button">.slideToggle()</button>
             <p>Display or hide the matched elements with a sliding motion. Example: Toggling the display of this paragraph with sliding motion.</p>
         </div>
         <div class="card">
             <h3 id="fade-in">Fade In</h3>
-            <button>.fadeIn()</button>
+            <button id="fade-in-button">.fadeIn()</button>
             <p>Display the matched elements by fading them to opaque. Example: This paragraph.</p>
         </div>
         <div class="card">
             <h3 id="fade-out">Fade Out</h3>
-            <button>.fadeOut()</button>
+            <button id="fade-out-button">.fadeOut()</button>
             <p>Hide the matched elements by fading them to transparent. Example: This paragraph</p>
         </div>
         <div class="card">
             <h3 id="add-class">Add Class</h3>
-            <button>.addClass()</button>
+            <button id="add-class-button">.addClass()</button>
             <p>Add class to the targeted element. Example: adding color red to this paragraph.</p>
         </div>
         <div class="card">
             <h3 id="before">Before</h3>
-            <button>.before()</button>
+            <button id="before-button">.before()</button>
             <p>Insert content, specified by the parameter, before each element in the set of matched elements. Example: Adding a new string before this paragraph element.</p>
         </div>
         <div class="card">
             <h3 id="after">After</h3>
-            <button>.after()</button>
+            <button id="after-button">.after()</button>
             <p>Insert content, specified by the parameter, after each element in the set of matched elements. Example: Adding a new string after this paragraph element.</p>
         </div>
         <div class="card">
             <h3 id="append">Append</h3>
-            <button>.append()</button>
+            <button id="append-button">.append()</button>
             <p>Insert content, specified by the parameter, to the end of each element in the set of matched elements. Example: Appending a new string to this paragraph element.</p>
         </div>
         <div class="card">
             <h3 id="html">HTML</h3>
-            <button>.html()</button>
+            <button id="html-button">.html()</button>
             <p>Get the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched element. Example: displaying the elements of this paragraph.</p>
         </div>
         <div class="card">
             <h3 id="attr">Attribute</h3>
-            <button>.attr()</button>
+            <button id="attr-button">.attr()</button>
             <p class="pred">Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element. Example: viewing the values of class attribute of this paragraph.</p>
         </div>
         <div class="card">
             <h3 id="val">Val</h3>
-            <button>.val()</button>
+            <button id="val-button">.val()</button>
             <p>Get the current value of the first element in the set of matched elements or set the value of every matched element. Example: Getting the value of the textbox below.</p>
             <form>
                 <input type="text" value="I love Village 88!">
@@ -181,7 +181,7 @@
         </div>
         <div class="card">
             <h3 id="text">Text</h3>
-            <button>.text()</button>
+            <button id="text-button">.text()</button>
             <p>Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements. Example: dislaying the text of this paragraph.</p>
         </div>
     </div>
