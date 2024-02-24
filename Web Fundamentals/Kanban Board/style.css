@@ -11,35 +11,67 @@ body {
         text-align: center;
     }
     .board {
-        height: 85vh;
-        padding: 0 20px;
-        .connectedSortable {
-            padding: 10px;
-            border: 8px solid rgb(0, 0, 0);
-            margin: 10px;
-            li { 
-                width: 100%;
+        min-height: 85vh;
+        width: 98vw;
+        margin: 0 auto;
+        .col {
+            position: relative;
+            .title {
+                text-align: center;
+                position: absolute;
+                top: -20px;
+                background-color: white;
+                padding: 5px;
+                border: 1px solid black;
+                border-radius: 5px;
             }
-        }
-        #sortable1.connectedSortable {
-            background-image: url("img/Todo.jpeg");
-            background-size: cover;
-        }
-        #sortable2.connectedSortable {
-            background-image: url("img/In-progress.jpg");
-            background-size: cover;
-        }
-        #sortable3.connectedSortable {
-            background-image: url("img/Testing.jpg");
-            background-size: cover;
-        }
-        #sortable4.connectedSortable {
-            background-image: url("img/Approval.jpeg");
-            background-size: cover;
-        }
-        #sortable5.connectedSortable {
-            background-image: url("img/Done.jpg");
-            background-size: cover;
+            .todo.title, .done.title {
+                left: 90px;
+            }
+            .in-progress.title {
+                left: 58px;
+            }
+            .approval.title {
+                left: 50px;
+            }
+            .testing.title {
+                left: 85px;
+            }
+            ul.connectedSortable {
+                min-height: 90%;
+                background-size: cover;
+                padding: 10px;
+                padding-top: 40px;
+                border: 8px solid rgb(0, 0, 0);
+                li {
+                    position: relative;
+                    width: 100%;
+                    img {
+                        position: relative;
+                        top: 1px;
+                        right: -95px;
+                        background-color: greenyellow;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 20px;
+                    }
+                }
+            }
+            #sortable1.connectedSortable {
+                background-image: url("img/Todo.jpeg");
+            }
+            #sortable2.connectedSortable {
+                background-image: url("img/In-progress.jpg");
+            }
+            #sortable3.connectedSortable {
+                background-image: url("img/Approval.jpeg");
+            }
+            #sortable4.connectedSortable {
+                background-image: url("img/Testing.jpg");
+            }
+            #sortable5.connectedSortable {
+                background-image: url("img/Done.jpg");
+            }
         }
     }
 }
