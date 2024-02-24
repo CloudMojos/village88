@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.css">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQueryUI -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <!-- JS/jQuery -->
+    <script>
+        $(function() {
+            $( "#sortable1, #sortable2, #sortable3, #sortable4, #sortable5" ).sortable({
+            connectWith: ".connectedSortable"
+            }).disableSelection();
+        });
+    </script>
+    <title>📌 Kanban Board 📌</title>
+</head>
+<body>
+    <h1>Kanban Board</h1>
+    <div class="board row">
+        <h3 class="sortable1-title">Todo</h3>
+        <ul id="sortable1" class="connectedSortable col list-group d-flex align-items-center">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item">Item 2</li>
+            <li class="list-group-item">Item 3</li>
+            <li class="list-group-item">Item 4</li>
+            <li class="list-group-item">Item 5</li>
+        </ul>
+
+        <h3 class="sortable2-title">In-progress</h3>
+        <ul id="sortable2" class="connectedSortable col list-group d-flex align-items-center">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item">Item 2</li>
+            <li class="list-group-item">Item 3</li>
+            <li class="list-group-item">Item 4</li>
+            <li class="list-group-item">Item 5</li>
+        </ul>
+
+        <h3 class="sortable3-title">For Approval</h3>
+        <ul id="sortable3" class="connectedSortable col list-group d-flex align-items-center">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item">Item 2</li>
+            <li class="list-group-item">Item 3</li>
+            <li class="list-group-item">Item 4</li>
+            <li class="list-group-item">Item 5</li>
+        </ul>
+
+        <h3 class="sortable4-title">Testing</h3>
+        <ul id="sortable4" class="connectedSortable col list-group d-flex align-items-center">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item">Item 2</li>
+            <li class="list-group-item">Item 3</li>
+            <li class="list-group-item">Item 4</li>
+            <li class="list-group-item">Item 5</li>
+        </ul>
+
+        <h3 class="sortable5-title">Done</h3>
+        <ul id="sortable5" class="connectedSortable col list-group d-flex align-items-center">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item">Item 2</li>
+            <li class="list-group-item">Item 3</li>
+            <li class="list-group-item">Item 4</li>
+            <li class="list-group-item">Item 5</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    h1 {
+        text-align: center;
+    }
+    .board {
+        height: 85vh;
+        padding: 0 20px;
+        .connectedSortable {
+            padding: 10px;
+            border: 8px solid rgb(0, 0, 0);
+            margin: 10px;
+            li { 
+                width: 100%;
+            }
+        }
+        #sortable1.connectedSortable {
+            background-image: url("img/Todo.jpeg");
+            background-size: cover;
+        }
+        #sortable2.connectedSortable {
+            background-image: url("img/In-progress.jpg");
+            background-size: cover;
+        }
+        #sortable3.connectedSortable {
+            background-image: url("img/Testing.jpg");
+            background-size: cover;
+        }
+        #sortable4.connectedSortable {
+            background-image: url("img/Approval.jpeg");
+            background-size: cover;
+        }
+        #sortable5.connectedSortable {
+            background-image: url("img/Done.jpg");
+            background-size: cover;
+        }
+    }
+}
