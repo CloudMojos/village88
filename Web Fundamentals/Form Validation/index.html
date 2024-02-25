@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Using jQuery!</title>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQueryUI -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <!-- Style -->
+    <style>
+        label, input {
+            display: block;
+        }
+    </style>
+    <!-- JS/Script -->
+    <script>
+        $(document).ready(function() {
+            $("#date").datepicker();
+
+            $("form").submit(function(event) {
+                event.preventDefault();
+                let error = '';
+
+                // First Name validation
+                // check if empty
+                if ($("#first-name").val() === "") {
+                    error = error.concat("First name can't be blank. \n");
+                }
+                // future todo, else if alphanumeric
+                // Last Name validation
+                // check if empty
+                if ($("#last-name").val() === "") {
+                    error = error.concat("Last name can't be blank. \n");
+                }
+                // future todo, else if alphanumeric
+                // Date validation
+                // check if empty
+                if ($("#date").val() === "") {
+                    error = error.concat("Date can't be blank. \n");
+                }
+                // future todo, else if not valid date
+                if (error.length != 0) {
+                    alert(error);
+                } else {
+                    alert(`Success, ${$('#first-name').val()} ${$('#last-name').val()}! \n 
+                    Your vaccination is reserved on ${$('#date').val()}.`);
+                }
+                console.log(error);
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="#">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name">
+        <label for="date">Preferred Date</label>
+        <input type="text" name="date" id="date">
+        <input type="submit" value="Reserve">
+    </form>
+</body>
+</html>
