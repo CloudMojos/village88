@@ -6,63 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>📄 The Blog Page</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0px;
-            border: 0px;
-            padding: 0px;
-        }
-        body {
-            width: 100%;
-            margin: 0 auto;
-        }
-        nav {
-            font-size: 20px;
-            padding: 25px;
-            display: flex;
-            justify-content: space-between;
-            background-color: whitesmoke;
-        }
-        h1 {
-            text-align: center;
-        }
-        img {
-            display: block;
-            width: 0px auto;
-            margin: 0px auto;
-        }
-        .content {
-            margin: 50px;
-            * {
-                padding: 10px;
-            }
-        }
-        form.review-form {
-            /* border: 1px dashed black; */
-            margin-top: 10px;
-            textarea {
-                display: block;
-                margin: 0 auto;
-                border: 1px solid black;
-                width: 100%;
-            }
-            input[type=submit] {
-                float: right;
-            }
-        }
-        form.reply-form {
-            textarea {
-                display: block;
-                margin: 0 0 0 auto;
-                border: 1px solid black;
-                width: 50%;
-            }
-            input[type=submit] {
-                float: right;
-            }
-        }
-    </style>
 </head>
 <body>
     <nav>

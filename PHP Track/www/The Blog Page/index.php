@@ -6,56 +6,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>📄 The Blog Page</title>
-    <style>
-        * {
-            padding: 0px;
-            /* border: 0px; */
-            box-sizing: border-box;
-            margin: 5px;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        form {
-            padding: 10px;
-            border: 1px dashed black;
-            display: flex;
-            flex-direction: column;
-            input[type=submit] {
-                align-self: flex-end;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css.php">
 </head>
 <body>
-<?php 
-    // header('Location: register.php');
-
-    if (!empty($_SESSION['error_messages'])) {
-        echo "<ul>";
-        foreach ($_SESSION['error_messages'] as $message) {
-            echo "<li>$message</li>";
-        }
-        echo "</ul>";
-    } 
-    $_SESSION['error_messages'] = [];
-?>
-    <h1>Login</h1>
-    <form action="process.php" method="POST">
-        <input type='hidden' name='action' value='login'>
-
-        <label for="email">Email: </label>
-        <input type="text" name="email" id="email">
-
-        <label for="password">Password: </label>
-        <input type="password" name="password" id="password">
-
-        <input type="submit" name="login" value="Login">
-    </form>
-    <p>Don't have an account? <a href="register.php">Register instead.</a></p>
-    <a href="i-forgor.php">Forgot password</a>
+<div class="container d-flex flex-column">
+        <h1 class="mt-3">Login</h1>
+        <?php 
+            // header('Location: register.php');
+        ?> 
+        <div class="content d-flex align-items-center flex-column align-self-center border p-3">
+            <form action="process.php" method="POST" class="mt-3">
+                <input type='hidden' name='action' value='login'>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" class="form-control">
+                </div>
+                <input type="submit" name="login" class="btn btn-primary" value="Login">
+            </form>
+            <?php if (!empty($_SESSION['error_messages'])): ?>
+            <ul class="alert alert-danger mt-3">
+                <?php foreach ($_SESSION['error_messages'] as $message): ?>
+                    <li><?=$message?></li>
+                <?php endforeach; ?>
+            </ul>
+            <?php endif; ?>
+            <?php $_SESSION['error_messages'] = []; ?>
+            <div class="border w-100 m-3"></div>
+            <a class="dropdown-item" href="register.php">New around here? Sign up</a>
+            <a class="dropdown-item" href="i-forgor.php">Forgot password?</a>
+        </div>
+    </div>  
 </body>
 </html>

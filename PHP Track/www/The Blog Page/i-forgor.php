@@ -6,29 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>📄 The Blog Page</title>
-    <style>
-        * {
-            padding: 0px;
-            /* border: 0px; */
-            box-sizing: border-box;
-            margin: 5px;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        form {
-            padding: 10px;
-            border: 1px dashed black;
-            display: flex;
-            flex-direction: column;
-            input[type=submit] {
-                align-self: flex-end;
-            }
-        }
-    </style>
 </head>
 <body>
 <?php 
