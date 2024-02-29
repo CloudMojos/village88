@@ -33,7 +33,32 @@ USE lead_gen_business;
 -- GROUP BY sites.domain_name;
 -- 7. What query would you run to show all the site owners, the site name(s), and the total number of leads 
 -- generated from each site for all time?
-
-
-
+-- SELECT CONCAT(clients.first_name, ' ', clients.last_name) AS client_name, sites.domain_name AS domain_name, COUNT(leads.leads_id) FROM
+-- sites
+-- LEFT JOIN clients ON clients.client_id = sites.client_id
+-- LEFT JOIN leads ON leads.site_id = sites.site_id
+-- GROUP BY client_name, domain_name;
+-- 8. What query would you run to get a list of site owners who had leads, and the total of each for the whole 2012?
+-- SELECT CONCAT(clients.first_name, ' ', clients.last_name) AS client_name, COUNT(leads.leads_id) FROM
+-- sites
+-- LEFT JOIN clients ON clients.client_id = sites.client_id
+-- LEFT JOIN leads ON leads.site_id = sites.site_id
+-- WHERE YEAR(leads.registered_datetime) = "2012"
+-- GROUP BY client_name;
+-- 9. What query would you run to get a list of site owners and the total # of leads we've generated for each 
+-- owner per month for the first half of Year 2012?
+-- SELECT CONCAT(clients.first_name, ' ', clients.last_name) AS client_name, COUNT(leads.leads_id) AS total_leads, MONTH(leads.registered_datetime) AS month
+-- FROM sites
+-- LEFT JOIN clients ON clients.client_id = sites.client_id
+-- LEFT JOIN leads ON leads.site_id = sites.site_id
+-- WHERE YEAR(leads.registered_datetime) = 2012 AND MONTH(leads.registered_datetime) BETWEEN 1 AND 6
+-- GROUP BY client_name, month
+-- ORDER BY MONTH(leads.registered_datetime); 
+-- 10. Write a single query that retrieves all the site names that each client owns and its total count. Group the 
+-- results so that each row shows a new client. (Tip: use GROUP_CONCAT)
+SELECT CONCAT(clients.first_name, ' ', clients.last_name) AS client_name, COUNT(sites.site_id) as number_of_sites, GROUP_CONCAT(sites.domain_name) as sites
+FROM sites
+LEFT JOIN clients ON clients.client_id = sites.client_id
+GROUP BY clients.client_id
+ORDER BY clients.client_id; 
 
