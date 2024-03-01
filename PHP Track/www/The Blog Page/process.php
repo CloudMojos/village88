@@ -6,7 +6,7 @@
     $GLOBALS['table_reviews'] = 'reviews';
     $GLOBALS['table_users'] = 'users';
 
-    // Hidden input 'to. Hindi 'to yung attribute ng form.
+    // Hidden input ito. Hindi ito yung attribute ng form input.
     if (isset($_POST['action']) && $_POST['action'] == 'register') {
         _register_user($_POST);
     } else if (isset($_POST['action']) && $_POST['action'] == 'login') {

@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-
+<?php $_SESSION['user'] = NULL ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +24,7 @@
                 <input type="password" name="password" id="password" class="form-control">
             </div>
             <input type="submit" name="login" class="btn btn-primary mt-3" value="Login">
+            <a href="main.php" class="btn btn-secondary mt-3">Login as Guest</a>
         </form>
         <?php if (!empty($_SESSION['error_messages'])): ?>
         <ul class="alert alert-danger mt-3">
