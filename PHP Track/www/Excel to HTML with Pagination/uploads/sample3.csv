@@ -1,0 +1,3 @@
+id,first_name,last_name,email,phone,salt,password,created_at,updated_at
+1,Toph,Beifong,gaang@gmail.com,09764094020,2a888e1c1200c134595b,4d614691d62fdb80f8ae5fa142313b96,"2024-02-02 19:44:36","2024-02-02 19:44:36"
+4,Gon,Freecs,greedisland@gmail.com,09764094021,48f5beeba16df06937c3,7d65b307c317788a6bb3ad6da2c3f937,"2024-02-02 20:21:51","2024-02-02 20:21:51"

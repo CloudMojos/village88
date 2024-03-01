@@ -1,7 +1,7 @@
 <?php
 /*--------------------BEGINNING OF THE CONNECTION PROCESS------------------*/
 //define constants for db_host, db_user, db_pass, and db_database
-$db = 'the_blog_page';
+$db = 'excel_to_html_w_pagination';
 //adjust the values below to match your database settings
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
