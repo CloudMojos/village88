@@ -27,7 +27,7 @@
 <?php
     foreach ($files as $file) {
 ?>
-    <li><a href=<?= "display.php?file={$file["name"]}"?>><?= "{$file["name"]}" ?></a></li>
+    <li><a href=<?= "display.php?file={$file["name"]}&p=0"?>><?= "{$file["name"]}" ?></a></li>
 <?php
     }
 ?>
