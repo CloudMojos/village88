@@ -23,6 +23,19 @@ class Main extends CI_Controller {
 		echo "You're Heisenberg";
 	}
 
+	public function world() 
+	{
+		$this->load->view('main/world');
+	}
+
+	public function ninja($number)
+	{
+		$data = array(
+			'number' => $number
+		);
+		$this->load->view('main/ninja', $data);
+	}
+
 	public function hello()
 	{
 		echo "Hello World!";
