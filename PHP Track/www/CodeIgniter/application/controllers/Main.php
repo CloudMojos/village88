@@ -18,6 +18,7 @@ class Main extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+	
 	public function index() 
 	{
 		echo "You're Heisenberg";
@@ -34,6 +35,46 @@ class Main extends CI_Controller {
 			'number' => $number
 		);
 		$this->load->view('main/ninja', $data);
+	}
+
+	public function users()
+	{
+		$this->load->view('users/index');
+	}
+
+	public function new()
+	{
+		$this->load->view('users/new');
+	}
+
+	public function create()
+	{
+		$data["data"] = $this->input->post(NULL, TRUE);
+		if ($data["data"] != NULL) {
+			$this->load->view('users/create', $data);
+		}
+		else {
+			$this->load->view('users/index');
+		}
+	}
+
+	public function count()
+	{
+		if ($this->session->userdata('count') == NULL) {
+			echo "yes";
+			$count = 1;
+		} else {
+			$count = $this->session->userdata('count');
+			$count++;
+		}
+
+		echo $count;
+		$this->session->set_userdata('count', $count);
+	}
+
+	public function reset()
+	{
+		$this->session->set_userdata('count', 0);
 	}
 
 	public function hello()
