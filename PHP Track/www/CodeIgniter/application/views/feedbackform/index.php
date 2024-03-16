@@ -9,7 +9,7 @@
 
 <h1>Hello world!</h1>
 
-<form action="result" method="post">
+<form action="result" method="POST">
     <label for="name">Your Name (optional):</label><br>
     <input type="text" id="name" name="name"><br><br>
 
